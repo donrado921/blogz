@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            body{
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background: #a8c9ff;
+            }            
+            
+            .title{
+                color: oldlace;
+                text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
+                text-align: center;
+                text-decoration: underline;
+                font-size: 40px;
+            }
+
+            .subhead{
+                color: oldlace;
+                text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
+                text-decoration: underline;
+                font-size: 25px;
+            }
+
+            .navbar{
+                color: oldlace;
+                text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
+                font-size: 20px;
+            }
+
+
+            .blog-body {
+                font-weight: bold;
+                display: inline-block;
+                font-size: 20px;
+                color: oldlace;
+                text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa, 1px 0 #aaaaaa, 0 -1px #aaaaaa; 
+            }
+            
+            .error, .error1, .error2, .user_taken,
+            .username_error, .password_error, .verify_error
+            {
+                color: red;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            textarea {
+                width: 300px;
+                height: 120px;
+            }
+            
+            #parent {
+                display: table;
+                width: 100%;
+            }
+
+            #form_login {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            nav ul {
+                padding: 0;
+                display: inline-block;
+            }
+
+            nav ul li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            nav ul li a {
+                color: oldlace;
+                text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
+                text-decoration: underline;
+                font-size: 25px;
+                padding: 5px 10px;
+            }
+
+            nav #user-account {
+                float: right;
+            }
+
+            #share-buttons img {
+                width: 35px;
+                padding: 35px;
+                border: 0;
+                box-shadow: 0;
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <nav>
+                <ul id="user-account">
+                    <li><a class="navbar" href="/login">LOGIN</a></li>
+                    <li><a class="navbar" href="/logout">LOGOUT</a></li>
+                </ul>
+                <ul>
+                    <li><a class="navbar" href="/">HOME</a></li>
+                    <li><a class="navbar" href="/blog">ALL POSTS</a></li>
+                    <li><a class="navbar" href="/newpost">NEW POST</a></li>
+                </ul>
+            </nav>
+
+        {% block content %} 
+        {% endblock %}
+
+    </body>
+</html>

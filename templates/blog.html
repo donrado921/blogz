@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    <h1 class="title">Blog Posts</h1>
+    {% for blog in blogs  %}
+        <h2><a class="subhead" href=/blog?id={{blog.id}}>{{blog.title}}</a></h2>
+        <div class="blog-body">{{blog.body}}</div>
+        {% for name in users %}
+        {% if name.id == blog.owner_id %}
+        <br/>
+        <p class="post-author">written by: <a class="navbar" href="/blog?user={{name.username}}">{{name.username}}</a> on {{blog.date}}</p>
+        <hr />
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}
