@@ -5,7 +5,13 @@
     <br>
     <p class="blog-body">{{single_blog.body}}</p>
     <br/>
+    {% for name in users %}
+    {% if name.id == single_blog.owner_id %}
     <br/>
+    <p class="post-author">written by: <a class="navbar" href="/blog?user={{name.username}}">{{name.username}}</a> on {{single_blog.date}}</p>
+    <hr />
+    {% endif %}
+    {% endfor %}
     <br/>
     <br/>
     <br/>

@@ -127,7 +127,7 @@ def blog():
 
     if blog_id:
         single_blog = Blog.query.filter_by(id=blog_id).first()
-        return render_template('single_blog.html', title="Blogz - All Posts", single_blog=single_blog)
+        return render_template('single_blog.html', title="Blogz - All Posts", single_blog=single_blog, users=users)
 
     if get_user:
         owner = User.query.filter_by(username=get_user).first()
